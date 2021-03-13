@@ -1,4 +1,15 @@
+from pathlib import Path  # python3 only
+from jinja2 import FileSystemLoader, Environment
 from pydantic import BaseSettings
+
+from .filters import color
+
+
+templates_path = Path(__file__).parent / 'templates'
+jinja_env = Environment(
+    loader=FileSystemLoader(str(templates_path))
+)
+jinja_env.filters['color'] = color
 
 
 class Settings(BaseSettings):

@@ -20,14 +20,13 @@ setup(
         "Programming Language :: Python :: 3"
     ],
     entry_points={
-        'console_scripts': ['brigid = brigid_cli.cli:main']
+        'console_scripts': ['brigid = brigid_cli.main:main']
     },
     install_requires=[
         "click >= 7.1.2",
         "pydantic == 1.7.3",
         "tabulate >= 0.8.7",
-        "giturlparse >= 0.9.2",
-        "dateparser >= 0.7.4",
+        "PyYAML >= 5.1.2",
         "brigid_api_client @ git+http://github.com/caltechads/brigid-api-client@master#egg=brigid-api-client"
     ],
 )
